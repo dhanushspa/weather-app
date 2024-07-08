@@ -1,0 +1,128 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #6dd5fa, #2980b9);
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  animation: inputFocus 1s ease-in-out;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #2980b9;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  animation: buttonHover 1s ease-in-out;
+}
+
+button:hover {
+  background: #1a5a7d;
+}
+
+#weather-result {
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+#weather-result h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+#weather-result p {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
+#weather-result img {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes inputFocus {
+  from {
+    box-shadow: 0 0 0 0 rgba(41, 128, 185, 0.4);
+  }
+  to {
+    box-shadow: 0 0 10px 5px rgba(41, 128, 185, 0.4);
+  }
+}
+
+@keyframes buttonHover {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
